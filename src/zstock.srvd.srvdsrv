@@ -1,0 +1,4 @@
+@EndUserText.label: 'Stock'
+define service ZSTOCK {
+  expose ZI_Stock as Stock;
+}

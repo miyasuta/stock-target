@@ -1,0 +1,23 @@
+managed implementation in class zbp_i_s1tock unique;
+strict ( 1 );
+
+define behavior for ZI_Stock alias Stock
+persistent table zstock
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  //  update;
+  //  delete;
+
+  mapping for zstock
+    {
+      Productid         = productid;
+      Batch             = batch;
+      Location          = location;
+      Quantity          = quantity;
+      SourceLastChanged = source_last_changed;
+      LastChangedAt     = last_changed_at;
+    }
+}
